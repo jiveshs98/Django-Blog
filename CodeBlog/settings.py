@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 # Superuser: jivesh, password: jivesh@123
 
 from pathlib import Path
+from django.contrib.messages import constants as messages
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -122,3 +124,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Added Manually
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
